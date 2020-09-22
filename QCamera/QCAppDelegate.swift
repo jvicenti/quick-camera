@@ -116,7 +116,12 @@ class QCAppDelegate: NSObject, NSApplicationDelegate, QCUsbWatcherDelegate {
             self.errorMessage(message: "Unfortunately, there was an error when trying to access the camera. Try again or select a different one.");
         }
     }
-    
+
+  @IBAction func detectDevices(_ sender: NSMenuItem) {
+      NSLog("Detect devices");
+      detectVideoDevices();
+  }
+
     @IBAction func mirrorHorizontally(_ sender: NSMenuItem) {
         NSLog("Mirror image menu item selected");
         isMirrored = !isMirrored;
